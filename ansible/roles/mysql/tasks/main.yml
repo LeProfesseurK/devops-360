@@ -10,13 +10,3 @@
   with_items:
     - mysql-server
     - python-mysqldb
-#- name: passw user in mysql
-- mysql_user:
-    name: niki
-    priv: '*.*:ALL,GRANT'
-    state: present
-
-- name: Create a new database
-  mysql_db:
-    name: devops
-    state: present

@@ -1,2 +1,12 @@
 ---
 # tasks file for webapp-database
+#- name: passw user in mysql
+- mysql_user:
+    name: app
+    priv: '*.*:ALL,GRANT'
+    state: present
+
+- name: Create a new database
+  mysql_db:
+    name: devops
+    state: present
