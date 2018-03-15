@@ -11,7 +11,7 @@
     - mysql-server
     - python-mysqldb
 
-  - name: Start mysql
+- name: Start mysql
   service:
     name: mysql
     state: started
