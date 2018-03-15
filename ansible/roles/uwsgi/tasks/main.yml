@@ -1,2 +1,49 @@
 ---
-# tasks file for uwsgi
+#
+
+- name: Installation Python Pip, Dev ...
+  apt:
+    state: present
+    name: "{{item}}"
+    cache_valid_time: 3600
+    update_cache: yes
+  with_items:
+    - python-pip
+    - build-essential
+    - python-dev
+
+##?????
+#- name: Installation virtualenv
+#  pip:
+#    name: virtualenv
+#
+##- name: Creation dossier projet
+##  file:
+##    path: ????
+##    state: directory
+##    mode: 0755
+#
+#- git:
+#  repo: ''
+#
+#- name: ENV du virtualenv
+#  pip:
+#    virtualenv: ????
+#
+##source myprojectenv/bin/activate
+#- name: Activate ENV
+#?????????
+#
+#- name: Installation uWSGI, flask
+#  pip:
+#    name: "{{item}}"
+#    virtualenv: ????
+#  with_items:
+#    - uwsgi
+#    - flask
+- name: Installation uwsgi
+  apt:
+    state: present
+    name: python-uwsgi
+    cache_valid_time: 3600
+    update_cache: yes

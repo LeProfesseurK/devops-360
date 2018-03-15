@@ -1,2 +1,24 @@
 ---
 # tasks file for nginx
+
+- name: Install nginx
+  apt:
+    state: present
+    name: nginx
+    cache_valid_time: 3600
+    update_cache: yes
+
+#- name: Delete default symlink site-enabled
+#  file:
+#      state: absent
+#      src: /etc/nginx/sites-enabled/default
+#
+#- name: Delete default site-available
+#  file:
+#      state: absent
+#      src: /etc/nginx/sites-available/default
+#
+#- name: Restart nginx
+#  service:
+#    state: reloaded
+#    name: nginx

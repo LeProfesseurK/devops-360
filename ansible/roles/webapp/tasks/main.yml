@@ -1,2 +1,18 @@
 ---
 # tasks file for webapp
+
+#- name: Clone application
+#  git:
+#    repo: 'https://github.com/Lowess/devops-360-webapp/tree/v1.0.0'
+#    dest: webserver/
+#
+#- name: Copy webserveur vhost conf
+#  copy:
+#    src: webserveur
+#    dest: /etc/nginx/sites-available/webserveur
+#
+#- name: Symlink webserveur in sites-enabled
+#  file:
+#      state: link
+#      src: /etc/nginx/sites-available/webserveur
+#      dest: /etc/nginx/sites-enabled/webserveur
