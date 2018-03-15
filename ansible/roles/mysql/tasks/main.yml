@@ -4,7 +4,7 @@
 
 - name: Install
   apt:
-    name: mysql
+    name: MySQLdb
     state: present
     cache_valid_time: 3600
 
@@ -14,7 +14,7 @@
     priv: '*.*:ALL, GRANT'
     state: present
 
-- name: Create a new database 
+- name: Create a new database
   mysql_db:
     name: devops
     state: present
