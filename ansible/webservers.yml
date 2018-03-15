@@ -7,11 +7,11 @@
 
 # TODO
 - name: Configure webservers
-  hosts: webservers
+  hosts: webserver
   become: yes
 
   roles: 
-	- common
-	- nginx
-	- uwsgi
-	- webapp
+    - common
+    - nginx
+    - uwsgi
+    - webapp

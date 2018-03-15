@@ -24,6 +24,11 @@
   timezone:
     name: Europe/Paris
 
+- name: Create app group
+  group:
+    name: app
+    gid: 202
+
 - name: Create app user
   user:
     name: app
@@ -32,8 +37,3 @@
     groups: app
     shell: /bin/bash
     comment: 'App User'
-
-- name: Create app group
-  group:
-    name: app
-    gid: 202
