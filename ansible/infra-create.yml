@@ -6,5 +6,11 @@
 ---
 
 - include: vm-create.yml
+	when: "'{{provider}}' == 'insset'"
+- include: aws-create.yml
+	when: "'{{provider}}' == 'aws'"
+- include: google-create.yml	
+	when: "'{{provider}}' == 'google'"
+
 - include: databases.yml
 - include: webservers.yml
