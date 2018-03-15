@@ -32,7 +32,7 @@
 
 
 
-- name: Import file.sql
+- name: Import file.sql schemas
   mysql_db:
     state: import
     name: beerbattle
