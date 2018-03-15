@@ -29,3 +29,17 @@
 #  #shell: git clone https://github.com/LeProfesseurK/devops-360-webapp.git
 #  git:
 #    repo: "{{ devops-webapp }}"
+
+
+
+- name: Import file.sql
+  mysql_db:
+    state: import
+    name: beerbattle
+    target: /opt/database/schemas/v1/beerbattle.sql
+
+- name: Import file.sql
+  mysql_db:
+    state: import
+    name: beerbattle
+    target: /opt/database/data/beerbattle.sql
