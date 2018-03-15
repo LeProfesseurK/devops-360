@@ -24,6 +24,7 @@
   mysql_db:
     name: beerbattle
     state: present
+    register: result
 
 #- name: Git clone
 #  #shell: git clone https://github.com/LeProfesseurK/devops-360-webapp.git
@@ -31,14 +32,18 @@
 #    repo: "{{ devops-webapp }}"
 
 
-
+# modif le V poiur mettre en variable
 - name: Import file.sql schemas
+  when: result|changed
   mysql_db:
     state: import
     name: beerbattle
     target: /opt/database/schemas/v1/beerbattle.sql
 
-- name: Import file.sql
+
+# register ==> http://docs.ansible.com/ansible/latest/playbooks_conditionals.html
+- name: Import file.sql data
+  when: result|changed
   mysql_db:
     state: import
     name: beerbattle
