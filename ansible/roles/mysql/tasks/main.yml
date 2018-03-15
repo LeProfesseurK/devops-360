@@ -15,3 +15,9 @@
   service:
     name: mysql
     state: started
+
+    #ajout du port 3306 pour la co externe---- FAIT avec sur la VM DATA netstat -anp | grep mysql
+    #faire les schémas et les contenus
+    # clone les devops-360-webapp dans les VM pour les utiliser
+      # -> exela V1
+      # -> création de la bas pour la 1ere fois insert la base
