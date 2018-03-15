@@ -2,28 +2,27 @@
 # tasks file for common
 
 - name: Stop Apache 2
+  # shell : service apache2 Stop
   service:
-    name: dhcp
     state: stopped
+    name: apache2
 
 - name: Install common apt-packages
-  apt:
-    name: "{{item}}"
-    state: present
+  package:
+    name: "{{ item }}"
+    state: latest
     update_cache: no
-
   with_items:
     - htop
     - telnet
-    - netstat
+    - net-tools
     - ntp
     - git
 
 - name: Set timezone
   timezone:
-    name: Europe/Paris
+    name: Asia/Tokyo
 
 - name: Create app user
   user:
     name: app
-
