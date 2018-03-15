@@ -1,2 +1,3 @@
 ---
 # defaults file for webapp
+webapp_setup_webserver: true

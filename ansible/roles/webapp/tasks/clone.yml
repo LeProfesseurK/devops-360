@@ -1,0 +1,4 @@
+- name: Clone application
+  git:
+    repo: 'https://github.com/Lowess/devops-360-webapp/tree/v1.0.0'
+    dest: webserver/
