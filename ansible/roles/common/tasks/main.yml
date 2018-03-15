@@ -1,2 +1,12 @@
 ---
 # tasks file for common
+
+- name: Stop Apache 2
+
+
+- name: Install common apt-packages
+
+- name: Set timezone
+
+- name: Create app user
+
