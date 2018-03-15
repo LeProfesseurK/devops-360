@@ -4,7 +4,7 @@
 
 - name: Install
   apt:
-    name: MySQLdb
+    name: mysql_db
     state: present
     cache_valid_time: 3600
 
