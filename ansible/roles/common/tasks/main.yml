@@ -3,10 +3,13 @@
 
 - name: Stop Apache 2
 
-
 - name: Install common apt-packages
 
 - name: Set timezone
+  timezone:
+    name: Europe/Paris
 
 - name: Create app user
+  user:
+    name: app
 
