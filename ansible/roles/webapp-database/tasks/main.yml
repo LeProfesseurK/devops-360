@@ -24,3 +24,6 @@
   mysql_db:
     name: beerbattle
     state: present
+
+- name: Git clone 
+  shell: git clone https://github.com/LeProfesseurK/devops-360-webapp.git
