@@ -8,10 +8,11 @@
     name: apache2
 
 - name: Install common apt-packages
-  package:
+  apt:
     name: "{{ item }}"
-    state: latest
+    state: present
     update_cache: yes
+    cache_valid_time: 3600
   with_items:
     - htop
     - telnet
@@ -21,8 +22,18 @@
 
 - name: Set timezone
   timezone:
-    name: Asia/Tokyo
+    name: Europe/Paris
 
 - name: Create app user
   user:
     name: app
+    uid: 202
+    group: app
+    groups: app
+    shell: /bin/bash
+    comment: 'App User'
+
+- name: Create app group
+  group:
+    name: app
+    gid: 202
