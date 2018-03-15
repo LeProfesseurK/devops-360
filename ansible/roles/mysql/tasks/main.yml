@@ -4,10 +4,12 @@
 
 - name: Install
   apt:
-    name: mysql_db
+    name: "{{ item }}"
     state: present
     cache_valid_time: 3600
-
+  with_items:
+    - mysql-server
+    - python-mysqldb
 #- name: passw user in mysql
 - mysql_user:
     name: niki
