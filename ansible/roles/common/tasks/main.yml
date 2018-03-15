@@ -11,7 +11,7 @@
   package:
     name: "{{ item }}"
     state: latest
-    update_cache: no
+    update_cache: yes
   with_items:
     - htop
     - telnet
