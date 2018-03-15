@@ -16,7 +16,7 @@
     priv: '*.*:ALL,GRANT'
     state: present
 
-#- name: Create a new database
-#  mysql_db:
-#    name: devops
-#    state: present
+- name: Create a new database
+  mysql_db:
+    name: devops
+    state: present
