@@ -22,38 +22,6 @@
     - uwsgi
     - uwsgitop
 
-#- name: Creation dossiers uwsgi
-#  file:
-#    path:
-#    state: directory
-#    mode: 0755
-
-#- git:
-#  repo: ''
-#
-#- name: ENV du virtualenv
-#  pip:
-#    virtualenv: ????
-#
-##source myprojectenv/bin/activate
-#- name: Activate ENV
-#?????????
-#
-#- name: Installation uWSGI, flask
-#  pip:
-#    name: "{{item}}"
-#    virtualenv: ????
-#  with_items:
-#    - uwsgi
-##    - flask
-#- name: Installation uwsgi
-#  apt:
-#    state: present
-#    name: python-uwsgi
-#    cache_valid_time: 3600
-#    update_cache: yes
-
-
 ### -------------- CORRECTION -------------------##
 
 

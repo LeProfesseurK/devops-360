@@ -1,5 +1,9 @@
 
 
+- name: Requirements au virtualenv
+  pip:
+    requirements: /opt/requirements.txt
+    virtualenv: /opt/venv
 
 
 
