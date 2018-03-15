@@ -1,10 +1,10 @@
 ---
 # tasks file for webapp-database
 # supprime les user mysql
-- mysql_user:
-    name: ''
-    host_all: yes
-    state: absent
+#- mysql_user:
+#    name: ''
+#    host_all: yes
+#    state: absent
 
 
 #- name: passw user in mysql
@@ -14,10 +14,10 @@
     state: present
 
 #sppprime la database
-- name: Dump all databases
-  mysql_db:
-    state: dump
-    name: all
+#- name: Dump all databases
+#  mysql_db:
+#    state: dump
+#    name: all
 
 # créé la database
 - name: Create a new database
