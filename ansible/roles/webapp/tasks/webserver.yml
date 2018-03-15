@@ -1,10 +1,18 @@
-- name: Copy webserveur conf
-  copy:
-    src: webserveur
-    dest: /etc/nginx/sites-available/webserveur
 
-- name: Symlink webserveur in sites-enabled
-  file:
-      state: link
-      src: /etc/nginx/sites-available/webserveur
-      dest: /etc/nginx/sites-enabled/webserveur
+
+
+
+
+
+
+
+#- name: Copy webserveur conf
+#  copy:
+#    src: webserveur
+#    dest: /etc/nginx/sites-available/webserveur
+#
+#- name: Symlink webserveur in sites-enabled
+#  file:
+#      state: link
+#      src: /etc/nginx/sites-available/webserveur
+#      dest: /etc/nginx/sites-enabled/webserveur
