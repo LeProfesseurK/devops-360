@@ -24,7 +24,7 @@
   mysql_db:
     name: beerbattle
     state: present
-    register: result
+  register: result
 
 #- name: Git clone
 #  #shell: git clone https://github.com/LeProfesseurK/devops-360-webapp.git
